@@ -1,5 +1,5 @@
 @Library('roboshop') _
 
 env.code_type = "static"
-env.component = "in-it-cont-parameters"
+env.component = "a-in-it-cont-parameters"
 cipipeline()
