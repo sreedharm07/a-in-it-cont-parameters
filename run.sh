@@ -6,3 +6,4 @@ for parameter in $PARAMETERS; do
   echo export ${app_parameter}=\"$(aws ssm get-parameter  --name $ssm_parameter --with-decryption | jq .Parameter.Value | sed -e 's/"//g')\" >>/common/parameters
 done
 
+cat /common/parameters
