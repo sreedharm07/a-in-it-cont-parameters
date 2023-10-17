@@ -5,3 +5,5 @@ for parameter in catalogue.pod.mongo_url,MONGO_URL catalogue.prod.DOCUMENTDB,DOC
   app_parameter=$(echo $parameter | awk -F, '{print $2}')
   aws ssm get-parameter --name $ssm_parameter --with-decryption | jq .Parameter.Value | sed -e 's/"//g'
 done
+
+#
